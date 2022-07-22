@@ -1,4 +1,4 @@
-from discord import Embed, EmbedField
+from discord import Colour, Embed, EmbedField
 from typing import (
     Any,
     List,
