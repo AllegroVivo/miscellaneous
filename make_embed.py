@@ -10,7 +10,7 @@ from utils.additional_colours import random_all
 ######################################################################
 def make_embed(*,
                title: str,
-               colour: Optional[Union[Colour, int]] = random_all(),
+               colour: Union[Colour, int] = random_all(),
                description: Optional[str] = Embed.Empty,
                image_url: Optional[str] = Embed.Empty,
                thumb_url: Optional[str] = Embed.Empty,
