@@ -7,10 +7,14 @@ from typing import (
     Union
 )
 from utils.additional_colours import random_all
+from datetime import datetime
+
 ######################################################################
+
+
 def make_embed(*,
                title: str,
-               colour: Union[Colour, int] = random_all(),
+               colour: Union[Colour, int] = None,
                description: Optional[str] = Embed.Empty,
                image_url: Optional[str] = Embed.Empty,
                thumb_url: Optional[str] = Embed.Empty,
@@ -45,12 +49,14 @@ def make_embed(*,
         The finished embed object.
 
     """
+    if colour is None:
+        colour = random_all()
 
     # Create embed
     embed = Embed(
-        colour = colour,
-        title = title,
-        description = description
+        colour=colour,
+        title=title,
+        description=description
     )
 
     # Do the things
