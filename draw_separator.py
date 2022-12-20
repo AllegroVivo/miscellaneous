@@ -1,5 +1,5 @@
 import math
-
+######################################################################
 def draw_separator(text: str, num_emoji: int = 0, extra: float = 0.0) -> str:
 
     text_value = extra + (1.95 * num_emoji)
@@ -44,3 +44,37 @@ def draw_separator(text: str, num_emoji: int = 0, extra: float = 0.0) -> str:
 
     return "═" * math.ceil(text_value)
   
+######################################################################
+### EXAMPLE ###
+######################################################################
+# import make_embed
+#
+# sample_text = "My super cool text string thing!"
+# emoji = "👍"
+#
+# embed = make_embed(
+#     title="Get Ready to Be Amazed",
+#     description=(
+#         f"{sample_text}\n"
+#         f"{draw_separator(sample_text)}\n\n"
+#        
+#         f"{emoji} {sample_text} {emoji}\n"
+#         f"{draw_separator(sample_text, num_emoji=2)}"
+#     )
+# )
+#
+#
+#  __________________________________________________
+# |                                                  |
+# |             Get Ready to Be Amazed               |
+# |                                                  |
+# |                                                  |
+# |        My super cool text string thing!          |
+# |        ════════════════════════════════          |
+# |                                                  |
+# |                                                  |
+# |     👍 My super cool text string thing! 👍      |
+# |     ═══════════════════════════════════════      |
+# |                                                  |
+# |                                                  |
+#  __________________________________________________
